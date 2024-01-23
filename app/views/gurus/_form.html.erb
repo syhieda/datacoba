@@ -1,0 +1,27 @@
+<%= form_with(model: guru) do |form| %>
+  <% if guru.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(guru.errors.count, "error") %> prohibited this guru from being saved:</h2>
+
+      <ul>
+        <% guru.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nama, style: "display: block" %>
+    <%= form.text_field :nama %>
+  </div>
+
+  <div>
+    <%= form.label :bid_studi, style: "display: block" %>
+    <%= form.text_field :bid_studi %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

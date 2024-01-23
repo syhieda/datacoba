@@ -1,0 +1,2 @@
+class Guru < ApplicationRecord
+end
